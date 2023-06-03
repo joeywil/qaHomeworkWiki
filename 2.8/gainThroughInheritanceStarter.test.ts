@@ -20,17 +20,21 @@ class Animal {
    */
   class Fish extends Animal {
     saltwater: boolean;
-    constructor(name: string, sound: string, food: boolean) {
+    // Required param for the fish class that is unique to the fish class.
+    constructor(name: string, food: string, saltwater: boolean) {
       super(name, null, food);
+      // Pulling from the class you are extending.
       this.saltwater = saltwater;
-    }  
+      // Adding new params into the constructor to be able to use outside the class.
+    };  
     soundOff(): string {
-      return `The ${this.name} is a fish and doesn't make a sound.`;
-    }
+      return `The ${this.name} is a fish and does not make sounds.`;
+    };
     habitat(): string {
       return `The ${this.name} is a ${this.saltwater ? "saltwater" : "freshwater"} fish.`;
-    }
-  }
+      // ? means options for your true/false true : false
+    };
+  };
   /**
    * Bird extends Animal, but takes an additional property, and has an additional method, fly().
    * @param {string} name - as expected
