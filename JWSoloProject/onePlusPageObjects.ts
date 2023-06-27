@@ -1,4 +1,4 @@
-import { BasePage } from "../../qrpt11Group1Project/basePageJW";
+import { BasePage } from "./basePageJW";
 import {Builder, By, Capabilities, promise, until, WebDriver,} from "selenium-webdriver";
 const { Key } = require("selenium-webdriver");
 export class onePlusPageObjects extends BasePage {
@@ -55,7 +55,7 @@ export class onePlusPageObjects extends BasePage {
         sgninBtn: By = By.xpath(`/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[2]/form/div[5]/button[1]`);
         //Support page selectors
         supportLink: By = By.xpath(`//*[@id="nav-pages-slide"]/div[1]/ul/li[5]/a/span`);
-        supportSearch: By = By.className('[class="el-pc-input relative el-input el-input--prefix el-input--suffix"]');
+        supportSearch: By = By.xpath('(//div[@class="el-pc-input relative el-input el-input--prefix el-input--suffix"])')
         supportOnePlusSeries: By = By.xpath(`//*[@id="el-collapse-head-5403"]/i[1]`);
         
         //Constructor

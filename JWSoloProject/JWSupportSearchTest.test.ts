@@ -1,4 +1,4 @@
-import { BasePage } from "../../qrpt11Group1Project/basePageJW";
+import { BasePage } from "./basePageJW";
 import { Builder, By, Capabilities, promise, until, WebDriver } from "selenium-webdriver";
 import { onePlusPageObjects } from "./onePlusPageObjects";
 function sleep(ms: number) {
@@ -28,8 +28,10 @@ const fs = require('fs');
   test("Support page search and list currency.", async () => {
    
     await pageObject.click(pageObject.supportLink); 
-    await pageObject.click(pageObject.supportSearch);
+    sleep(2000);
+    
     await driver.findElement(pageObject.supportSearch).sendKeys("OnePlus 11\n");
+    sleep(5000);
    
     await sleep(1000);
     fs.writeFile(`${__dirname}/Support.png`,

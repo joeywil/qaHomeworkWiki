@@ -1,4 +1,4 @@
-import { BasePage } from "../../qrpt11Group1Project/basePageJW";
+import { BasePage } from "./basePageJW";
 import { Builder, By, Capabilities, promise, until, WebDriver } from "selenium-webdriver";
 import { onePlusPageObjects } from "./onePlusPageObjects";
 function sleep(ms: number) {
